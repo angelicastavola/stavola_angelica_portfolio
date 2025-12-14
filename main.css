@@ -300,13 +300,13 @@ section {
 
   /* Riduco la dimensione dei testi principale */
   .font-size1 {
-    font-size: 30px; /* prima era 60px */
+    font-size: 25px; /* prima era 60px */
     line-height: 1.2;
   } 
     
 
   .font-size2 {
-    font-size: 25px; /* prima era 35px */
+    font-size: 20px; /* prima era 35px */
     
   }
 
