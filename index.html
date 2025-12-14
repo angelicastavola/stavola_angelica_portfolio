@@ -403,6 +403,21 @@ hamburger.addEventListener("click", () => {
 
 
 
+// Chiudo il menu hamburger quando clicco su un link
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Itero su tutti i link
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // Se il menu è aperto (classe active), lo chiudo
+    if(navMenu.classList.contains('active')){
+      navMenu.classList.remove('active');
+    }
+  });
+});
+
+
+
 </script>
 
 </body>
