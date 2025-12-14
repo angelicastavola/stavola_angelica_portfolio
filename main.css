@@ -1,0 +1,340 @@
+
+body {
+    margin: 0;
+}
+.header {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    position: fixed;  /* lo rende fisso */
+    top: 0;           /* sempre in cima */
+    left: 0;
+    width: 100%;      /* occupa tutta la larghezza */
+    z-index: 1000;    /* sopra tutti gli altri elementi */
+}
+
+
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-style: montserrat;
+}
+
+.background-black {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.background-grey {
+
+    background-color: #f7f7f7;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+}
+
+.font-family-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-family-fustat {
+    font-family: 'Fustat', sans-serif;
+}
+
+.font-size1 {
+    font-size: 60px;
+}
+
+.font-size2 {
+    font-size: 35px;
+}
+
+
+.font-size3 {
+    font-size: 18px;
+    line-height: 24px;  
+}
+
+.font-size4 {
+    font-size: 16px;
+}
+
+.font-size5 {
+    font-size: 25px;
+}
+
+.font-size6 {
+    font-size: 13px;
+}
+
+
+.logo {
+  width: 33px;      /* larghezza fissa */
+  height: auto;      /* mantiene le proporzioni */
+}
+
+.divisore {
+
+    background-color: black;
+    color: white
+}
+
+
+
+
+
+/* ANIMAZIONI IMMAGINI */
+
+    .animate.blur {
+                filter: blur(8px);
+            }
+
+    .animate.blur.visible {
+                opacity: 1;
+                filter: blur(0);
+            }
+
+     .animate {
+                opacity: 0;
+                transition: opacity 2s ease, transform .10s ease, filter .5s ease;
+            }        
+
+
+
+
+
+
+/* LINK NAVIGAZIONE E CONTATTI CON ANIMAZIONI*/
+
+.header .nav-link {
+  position: relative;
+  text-decoration: none;
+
+}
+
+.header .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background-color: white; /* linea base bianca */
+  transition: width 0.6s ease, background-color 0.6s ease;
+}
+
+
+.header .nav-link:hover::after {
+  width: 100%; }
+
+
+
+.contact-link {
+  position: relative;
+  text-decoration: none;
+  color: black; /* colore dei contatti */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1.9px;
+  left: 0;
+  bottom: -1px;
+  background-color: black; /* linea dei contatti */
+  transition: width 1s ease, background-color 1s ease;
+}
+
+
+.contact-link:hover::after {
+  width: 100%;
+}
+
+
+
+
+
+
+
+/* NASCONDO IL CURSORE DI SISTEMA */
+body {
+  cursor: none;
+}
+
+/* Rimuovo cursore standard sui link */
+a {
+  cursor: none;
+}
+
+/* CURSORE CUSTOM - STATO BASE (SEMPRE VISIBILE) */
+
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid black;
+  transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: white;
+  white-space: nowrap;
+}
+
+
+/* CURSORE SU PROGETTO */
+#custom-cursor.project {
+  width: auto;          /* larghezza adattata al testo */
+  height: auto;         /* altezza adattata al testo */
+  padding: 6px 12px;    /* piccolo padding attorno al testo */
+  border-radius: 20px;  /* leggero bordo arrotondato */
+  background: transparent; /* niente cerchio colorato */
+  border: none;         /* nessun bordo */
+  color: black;         /* colore del testo */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+/* CURSORE HAMBURGER */
+
+.hamburger {
+  width: 28px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: none; /* mantiene il tuo cursore custom */
+}
+
+.hamburger span {
+  height: 2px;
+  width: 100%;
+  background: white;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* MENU MOBILE */
+@media (max-width: 991px) {
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100vw;
+
+    margin: 0;
+    padding: 30px 0;
+
+    background: black;
+    text-align: center;
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: block;
+  }
+}
+
+/* SCROLL SPAZIO PER NAVIGAZIONE */
+
+section {
+  scroll-margin-top: 55px;
+}
+
+
+/* FRECCIA SCROLL DOWN */
+.scroll-arrow {
+  position: absolute;
+  bottom: 45px;   /* distanza dal fondo */
+  left: 50%;      /* centro orizzontale */
+  transform: translateX(-50%);
+  cursor: none;   /* mantiene il cursore custom */
+  transition: opacity 0.3s ease;
+}
+
+.scroll-arrow img {
+  width: 24px;   /* dimensione coerente con il layout */
+  height: auto;
+}
+
+
+
+
+
+
+
+/* VERSIONE MOBILE */
+
+@media (max-width: 768px) {
+
+  /* Nascondo il cursore custom su mobile */
+  #custom-cursor {
+    display: none;
+  }
+
+  /* Riduco la dimensione dei testi principale */
+  .font-size1 {
+    font-size: 36px; /* prima era 60px */
+    line-height: 1.2;
+  } 
+    
+
+  .font-size2 {
+    font-size: 30px; /* prima era 35px */
+    
+  }
+
+/* stringo lo scherm nero iniziale */
+    #home .background-black {
+        min-height: 80vh; /* o 70vh se vuoi ancora più compatto */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+   
+/* Rimuovo l'animazione della sottolineatura sui link nav e contatti */
+    .header .nav-link::after,
+    .contact-link::after {
+        display: none;
+    }
+
+   /* Link di navigazione e contatti */
+.nav-link,
+.contact-link {
+  transition: color 0.2s ease; /* transizione morbida */
+}
+
+/* Colore al click */
+.nav-link:active,
+.contact-link:active {
+  color: #c4c4c4; /* colore elegante al click */
+}
+}
+
