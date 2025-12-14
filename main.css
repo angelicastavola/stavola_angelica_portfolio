@@ -330,16 +330,20 @@ section {
         display: none;
     }
 
-   /* Link di navigazione e contatti */
-.nav-link,
-.contact-link {
-  transition: color 0.3s ease; /* transizione */
-}
+/* Nav link: cambia solo il colore del testo */
+  .nav-link:active {
+      color: #292929; /* colore del testo al tocco */
+      background-color: transparent; /* niente sfondo */
+      border-radius: 0; /* niente bordi arrotondati */
+      padding: 0; /* mantiene il padding originale */
+  }
 
-/* Colore al click */
-.nav-link:active,
-.contact-link:active {
-  color: #292929; 
-}
+  /* Contact link: cambia lo sfondo */
+  .contact-link:active {
+      background-color: #e0e0e0; /* grigio chiaro */
+      color: #000; /* colore testo leggibile */
+      border-radius: 8px; /* bordi arrotondati */
+      padding: 4px 8px; /* padding per evidenziare lo sfondo */
+  }
 }
 
