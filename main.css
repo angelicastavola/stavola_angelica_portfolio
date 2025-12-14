@@ -300,13 +300,13 @@ section {
 
   /* Riduco la dimensione dei testi principale */
   .font-size1 {
-    font-size: 36px; /* prima era 60px */
+    font-size: 30px; /* prima era 60px */
     line-height: 1.2;
   } 
     
 
   .font-size2 {
-    font-size: 30px; /* prima era 35px */
+    font-size: 25px; /* prima era 35px */
     
   }
 
@@ -328,13 +328,13 @@ section {
    /* Link di navigazione e contatti */
 .nav-link,
 .contact-link {
-  transition: color 0.2s ease; /* transizione morbida */
+  transition: color 0.3s ease; /* transizione */
 }
 
 /* Colore al click */
 .nav-link:active,
 .contact-link:active {
-  color: #c4c4c4; /* colore elegante al click */
+  color: #292929; 
 }
 }
 
