@@ -60,7 +60,7 @@ h1 {
 
 
 .font-size3 {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 24px;  
 }
 
@@ -69,7 +69,7 @@ h1 {
 }
 
 .font-size5 {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .font-size6 {
@@ -308,6 +308,11 @@ section {
   .font-size2 {
     font-size: 20px; /* prima era 35px */
     
+  }
+
+  .font-size3 {
+    font-size: 13px; /* prima era 18px */
+    line-height: 22px;  
   }
 
 /* stringo lo scherm nero iniziale */
