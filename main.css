@@ -176,6 +176,7 @@ body {
 /* Rimuovo cursore standard sui link */
 a {
   cursor: none;
+  text-decoration: none;
 }
 
 /* CURSORE CUSTOM - STATO BASE (SEMPRE VISIBILE) */
@@ -347,3 +348,11 @@ section {
   }
 }
 
+.social-icon img {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+/* Cambia colore quando passi sopra */
+.social-icon:hover img {
+  filter: hue-rotate(200deg) brightness(1.2);
+  transform: scale(1.1);
+}
